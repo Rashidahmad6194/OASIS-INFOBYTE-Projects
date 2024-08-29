@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required><br>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegisterPage()">Register here</a></p>
+    </div>
+    
+    <div id="register-page" class="page" style="display: none;">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" required><br>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required><br>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLoginPage()">Login here</a></p>
+    </div>
+    
+    <div id="home-page" class="page" style="display: none;">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <p>This is a secured page.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
